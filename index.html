@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arapça Dersi - Sınıf Seçimi</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:#f8f9fa;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1rem;}
+  .landing{width:100%;max-width:580px;}
+  .hero{text-align:center;margin-bottom:2.5rem;}
+  .school-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:6px 16px;font-size:13px;color:#6b7280;margin-bottom:1.2rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  .badge-dot{width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;}
+  .hero h1{font-size:30px;font-weight:900;color:#111827;line-height:1.2;margin-bottom:.5rem;letter-spacing:-0.5px;}
+  .hero p{font-size:15px;color:#6b7280;}
+  .divider{display:flex;align-items:center;gap:12px;margin:0 0 1.5rem;color:#9ca3af;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;}
+  .divider::before,.divider::after{content:'';flex:1;height:1px;background:#e5e7eb;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1.4rem 1.25rem 1.25rem;cursor:pointer;transition:border-color .2s,transform .15s,box-shadow .15s;text-decoration:none;display:block;position:relative;overflow:hidden;}
+  .card:hover{border-color:#d1d5db;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08);}
+  .card:active{transform:scale(0.98);}
+  .card-accent{position:absolute;top:0;left:0;right:0;height:4px;}
+  .c5 .card-accent{background:#4f46e5;}
+  .c6 .card-accent{background:#c9983a;}
+  .c7 .card-accent{background:#1a6b3a;}
+  .c8 .card-accent{background:#b83232;}
+  .card-number{font-size:44px;font-weight:900;line-height:1;margin-bottom:2px;}
+  .c5 .card-number{color:#4f46e5;}
+  .c6 .card-number{color:#c9983a;}
+  .c7 .card-number{color:#1a6b3a;}
+  .c8 .card-number{color:#b83232;}
+  .card-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#9ca3af;margin-bottom:10px;}
+  .card-title{font-size:15px;font-weight:800;color:#111827;margin-bottom:5px;line-height:1.3;}
+  .card-subtitle{font-size:12px;color:#6b7280;line-height:1.5;}
+  .card-footer{margin-top:14px;padding-top:12px;border-top:1px solid #f3f4f6;display:flex;align-items:center;justify-content:space-between;}
+  .card-tag{font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;}
+  .c5 .card-tag{background:#ebe9fe;color:#4f46e5;}
+  .c6 .card-tag{background:#fdf6e3;color:#a07020;}
+  .c7 .card-tag{background:#e8f5ee;color:#1a6b3a;}
+  .c8 .card-tag{background:#fef2f2;color:#b83232;}
+  .arrow{font-size:16px;color:#9ca3af;}
+  .footer-note{text-align:center;margin-top:1.8rem;font-size:12px;color:#9ca3af;}
+  @media(max-width:420px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="landing">
+  <div class="hero">
+    <div class="school-badge">
+      <span class="badge-dot"></span>
+      Arapça Dersi Materyalleri
+    </div>
+    <h1>Sınıfınızı seçin</h1>
+    <p>Konuşma rehberine erişmek için sınıfınıza tıklayın</p>
+  </div>
+
+  <div class="divider">Sınıflar</div>
+
+  <div class="grid">
+    <a class="card c5" href="5.html">
+      <div class="card-accent"></div>
+      <div class="card-number">5</div>
+      <div class="card-label">Sınıf</div>
+      <div class="card-title">Kişisel Konuşma Rehberi</div>
+      <div class="card-subtitle">Kişisel tanışma ve günlük diyaloglar</div>
+      <div class="card-footer">
+        <span class="card-tag">5. Sınıf</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <a class="card c6" href="6.html">
+      <div class="card-accent"></div>
+      <div class="card-number">6</div>
+      <div class="card-label">Sınıf</div>
+      <div class="card-title">Dini Mekânlar</div>
+      <div class="card-subtitle">Dini yerler ve kutsal mekânlar hakkında konuşma</div>
+      <div class="card-footer">
+        <span class="card-tag">6. Sınıf</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <a class="card c7" href="7.html">
+      <div class="card-accent"></div>
+      <div class="card-number">7</div>
+      <div class="card-label">Sınıf</div>
+      <div class="card-title">Konuşma Kitapçığı</div>
+      <div class="card-subtitle">Orta düzey diyaloglar ve alıştırmalar</div>
+      <div class="card-footer">
+        <span class="card-tag">7. Sınıf</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <a class="card c8" href="8.html">
+      <div class="card-accent"></div>
+      <div class="card-number">8</div>
+      <div class="card-label">Sınıf</div>
+      <div class="card-title">Konuşma Kitapçığı</div>
+      <div class="card-subtitle">İleri düzey konuşma metinleri</div>
+      <div class="card-footer">
+        <span class="card-tag">8. Sınıf</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer-note">⚠ Tüm dosyaları (5.html, 6.html, 7.html, 8.html) aynı klasörde bulundurun</div>
+</div>
+</body>
+</html>

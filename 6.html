@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كتيب المحادثة - الأماكن الدينية | 6. Sınıf Arapça Konuşma Kitapçığı</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9983A;
+    --gold-light: #F0C86A;
+    --gold-pale: #FDF6E3;
+    --green-dark: #1A3A2A;
+    --green-mid: #2D5A3D;
+    --green-light: #4A8C5C;
+    --green-pale: #E8F5EE;
+    --cream: #FAF7F0;
+    --text-dark: #1A1A2E;
+    --text-mid: #3D3D5C;
+    --white: #FFFFFF;
+    --shadow: 0 4px 24px rgba(26,58,42,0.10);
+    --shadow-lg: 0 8px 40px rgba(26,58,42,0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Cairo', 'Amiri', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+    color: var(--white);
+    padding: 36px 20px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '☪';
+    position: absolute;
+    font-size: 220px;
+    opacity: 0.05;
+    top: -40px; left: -30px;
+    color: var(--gold);
+    pointer-events: none;
+  }
+  .header::after {
+    content: '🕌';
+    position: absolute;
+    font-size: 160px;
+    opacity: 0.07;
+    bottom: -30px; right: 10px;
+    pointer-events: none;
+  }
+  .header-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 18px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-family: 'Amiri', serif;
+    font-size: clamp(26px, 5vw, 42px);
+    color: var(--gold-light);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .header h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(13px, 2.5vw, 18px);
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  /* ===== MAIN CONTAINER ===== */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 16px 60px;
+  }
+
+  /* ===== SECTION CARD ===== */
+  .section-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(201,152,58,0.15);
+  }
+  .section-header {
+    background: linear-gradient(90deg, var(--green-dark), var(--green-mid));
+    color: var(--gold-light);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-header .icon { font-size: 22px; }
+  .section-header h3 {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    flex: 1;
+  }
+  .section-header .tr-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 600;
+  }
+  .section-body { padding: 20px 24px; }
+
+  /* ===== INSTRUCTION BOX ===== */
+  .instruction {
+    background: var(--green-pale);
+    border-right: 4px solid var(--green-light);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--green-dark);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+  }
+
+  /* ===== TABLE ===== */
+  .vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin-bottom: 8px;
+  }
+  .vocab-table thead tr {
+    background: var(--gold-pale);
+  }
+  .vocab-table thead th {
+    padding: 10px 12px;
+    text-align: right;
+    font-weight: 700;
+    color: var(--green-dark);
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .vocab-table thead th:first-child { text-align: center; }
+  .vocab-table tbody tr:nth-child(even) { background: #F9F5EE; }
+  .vocab-table tbody tr:hover { background: var(--green-pale); }
+  .vocab-table td {
+    padding: 9px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(201,152,58,0.13);
+  }
+  .num-cell {
+    text-align: center;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: 'Nunito', sans-serif;
+    width: 36px;
+  }
+  .arabic-word {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    color: var(--green-dark);
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s;
+    direction: rtl;
+  }
+  .arabic-word:hover { color: var(--gold); }
+  .telaffuz {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: #7A5C1E;
+    font-style: italic;
+    direction: ltr;
+    text-align: left;
+  }
+  .anlam {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--green-dark);
+    font-weight: 600;
+  }
+
+  /* ===== TOOLTIP ===== */
+  .arabic-word { position: relative; }
+  .arabic-word .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 8px 14px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 130%;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    direction: ltr;
+    text-align: center;
+    min-width: 160px;
+  }
+  .arabic-word .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; right: 50%;
+    transform: translateX(50%);
+    border: 6px solid transparent;
+    border-top-color: var(--green-dark);
+  }
+  .arabic-word:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* ===== SENTENCES TABLE ===== */
+  .sentence-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .sentence-table thead tr { background: var(--gold-pale); }
+  .sentence-table thead th {
+    padding: 10px 12px;
+    font-weight: 700;
+    color: var(--green-dark);
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    border-bottom: 2px solid var(--gold);
+    text-align: right;
+  }
+  .sentence-table thead th:first-child { text-align: center; width: 36px; }
+  .sentence-table tbody tr:nth-child(even) { background: #F9F5EE; }
+  .sentence-table tbody tr:hover { background: var(--green-pale); }
+  .sentence-table td {
+    padding: 10px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(201,152,58,0.13);
+  }
+  .arabic-sentence {
+    font-family: 'Amiri', serif;
+    font-size: 18px;
+    color: var(--green-dark);
+    direction: rtl;
+    line-height: 1.8;
+  }
+  .sentence-telaffuz {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: #7A5C1E;
+    font-style: italic;
+    direction: ltr;
+    text-align: left;
+    line-height: 1.7;
+  }
+  .sentence-anlam {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: var(--green-dark);
+    line-height: 1.6;
+  }
+
+  /* ===== PARAGRAPH TABS ===== */
+  .tab-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .tab-btn {
+    padding: 9px 22px;
+    border-radius: 30px;
+    border: 2px solid var(--green-mid);
+    background: var(--white);
+    color: var(--green-mid);
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--green-dark);
+    color: var(--gold-light);
+    border-color: var(--green-dark);
+  }
+
+  /* ===== PARAGRAPH DISPLAY ===== */
+  .para-display { display: none; }
+  .para-display.active { display: block; }
+
+  .para-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+    color: var(--green-dark);
+    line-height: 2.4;
+    padding: 16px;
+    background: var(--gold-pale);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    direction: rtl;
+    border-right: 4px solid var(--gold);
+  }
+
+  /* Colored words in paragraph */
+  .w { cursor: pointer; position: relative; font-weight: 700; transition: opacity 0.15s; }
+  .w:hover { opacity: 0.75; }
+  .w .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 7px 12px;
+    border-radius: 9px;
+    position: absolute;
+    bottom: 130%;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    direction: ltr;
+    text-align: center;
+    min-width: 140px;
+  }
+  .w .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; right: 50%;
+    transform: translateX(50%);
+    border: 5px solid transparent;
+    border-top-color: var(--green-dark);
+  }
+  .w:hover .tooltip { visibility: visible; opacity: 1; }
+
+  /* Color palette for words */
+  .c1 { color: #C0392B; }
+  .c2 { color: #1A6B3A; }
+  .c3 { color: #1565C0; }
+  .c4 { color: #7B1FA2; }
+  .c5 { color: #E65100; }
+  .c6 { color: #00695C; }
+  .c7 { color: #AD1457; }
+  .c8 { color: #4E342E; }
+  .c9 { color: #283593; }
+  .c10 { color: #558B2F; }
+
+  /* Paragraph vocab+telaffuz table */
+  .para-vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin-bottom: 10px;
+  }
+  .para-vocab-table thead tr { background: var(--gold-pale); }
+  .para-vocab-table thead th {
+    padding: 8px 10px;
+    font-weight: 700;
+    color: var(--green-dark);
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+    border-bottom: 2px solid var(--gold);
+    text-align: right;
+  }
+  .para-vocab-table thead th:first-child { text-align: center; width: 32px; }
+  .para-vocab-table tbody tr:nth-child(even) { background: #F9F5EE; }
+  .para-vocab-table tbody tr:hover { background: var(--green-pale); }
+  .para-vocab-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid rgba(201,152,58,0.10);
+    vertical-align: middle;
+  }
+  .pv-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 18px;
+    font-weight: 700;
+    direction: rtl;
+  }
+  .pv-tel {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #7A5C1E;
+    direction: ltr;
+    text-align: left;
+  }
+  .pv-anlam {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green-dark);
+  }
+
+  /* ===== HADITH BOX ===== */
+  .hadith-box {
+    background: linear-gradient(135deg, var(--green-dark), #243B31);
+    color: var(--gold-light);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 14px 0;
+    text-align: center;
+    font-family: 'Amiri', serif;
+    font-size: 19px;
+    line-height: 2.2;
+    direction: rtl;
+    position: relative;
+  }
+  .hadith-box::before {
+    content: '❝';
+    font-size: 40px;
+    opacity: 0.2;
+    position: absolute;
+    top: 6px; right: 12px;
+  }
+
+  /* ===== MEMORIZE BADGE ===== */
+  .memorize-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gold);
+    color: var(--green-dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 18px 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: var(--green-mid);
+    opacity: 0.7;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width: 600px) {
+    .vocab-table, .sentence-table, .para-vocab-table { font-size: 12px; }
+    .arabic-word { font-size: 17px; }
+    .para-arabic { font-size: 19px; }
+    .tab-btn { padding: 7px 14px; font-size: 13px; }
+    .section-body { padding: 14px 12px; }
+  }
+
+  /* ===== INTRO CARD ===== */
+  .intro-card {
+    background: linear-gradient(135deg, var(--green-pale), var(--gold-pale));
+    border: 1px solid rgba(201,152,58,0.25);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 26px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+  .intro-card h4 {
+    font-size: 16px;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+
+  /* Print */
+  @media print {
+    .header::before, .header::after { display: none; }
+    .section-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">6. Sınıf · الصف السادس</div>
+  <h1>كتيب المحادثة — الأماكن الدينية</h1>
+  <h2>Konuşma Kitapçığı — Dini Mekânlar</h2>
+</div>
+
+<div class="container">
+
+  <div class="intro-card">
+    <h4>📖 Bu kitapçık nasıl kullanılır? | كيف تستخدم هذا الكتيب؟</h4>
+    Önce selamlama ve tanışma cümlelerini öğren. Ardından konu paragraflarından birini seç, renkli kelimelerin üzerine fareyi getirerek telaffuzunu ve anlamını öğren. İstediğin paragrafı ezberleyebilirsin!
+    <br><br>
+    أولاً تعلّم جمل الترحيب والتعريف بالنفس، ثم اختر فقرة واحدة من الفقرات الأربع، ضع المؤشر على الكلمات الملونة لترى نطقها ومعناها. يمكنك حفظ أي فقرة تريدها!
+  </div>
+
+  <!-- ====== SECTION 1: GREETING VOCAB ====== -->
+  <div class="section-card">
+    <div class="section-header">
+      <span class="icon">👋</span>
+      <h3>المفردات — الترحيب والتعريف بالنفس</h3>
+      <span class="tr-label">Selamlama ve Tanıtım Kelimeleri</span>
+    </div>
+    <div class="section-body">
+      <div class="instruction">📌 Aşağıdaki kelimeleri öğren, renk ve telaffuz sütunlarına dikkat et. Arapça kelimenin üzerine fareyi getirerek ipucunu görebilirsin.</div>
+      <table class="vocab-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>الكلمة بالعربية | Arapça Kelime</th>
+            <th>Telaffuz (Okunuş)</th>
+            <th>Türkçe Anlamı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">١</td>
+            <td><span class="arabic-word c1">أَهْلاً وَسَهْلاً<span class="tooltip">Telaffuz: Ehlen ve sehlen | Anlam: Hoş geldiniz</span></span></td>
+            <td class="telaffuz">Ehlen ve sehlen</td>
+            <td class="anlam">Hoş geldiniz / Merhaba</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٢</td>
+            <td><span class="arabic-word c2">مَرْحَبًا<span class="tooltip">Telaffuz: Merhaben | Anlam: Merhaba</span></span></td>
+            <td class="telaffuz">Merhaben</td>
+            <td class="anlam">Merhaba</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٣</td>
+            <td><span class="arabic-word c3">أَصْدِقَائِي<span class="tooltip">Telaffuz: Esdikaaî | Anlam: Arkadaşlarım</span></span></td>
+            <td class="telaffuz">Esdikaaî</td>
+            <td class="anlam">Arkadaşlarım</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٤</td>
+            <td><span class="arabic-word c4">اِسْمِي<span class="tooltip">Telaffuz: İsmî | Anlam: Adım / İsmim</span></span></td>
+            <td class="telaffuz">İsmî</td>
+            <td class="anlam">Adım / İsmim</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٥</td>
+            <td><span class="arabic-word c5">أَنَا<span class="tooltip">Telaffuz: Ene | Anlam: Ben</span></span></td>
+            <td class="telaffuz">Ene</td>
+            <td class="anlam">Ben</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٦</td>
+            <td><span class="arabic-word c6">فِي الصَّفِّ<span class="tooltip">Telaffuz: Fis-saff | Anlam: Sınıfta</span></span></td>
+            <td class="telaffuz">Fis-saff</td>
+            <td class="anlam">Sınıfta</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٧</td>
+            <td><span class="arabic-word c7">السَّادِس<span class="tooltip">Telaffuz: Es-sâdis | Anlam: Altıncı</span></span></td>
+            <td class="telaffuz">Es-sâdis</td>
+            <td class="anlam">Altıncı (6.)</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٨</td>
+            <td><span class="arabic-word c8">سَأُحَدِّثُكُمْ<span class="tooltip">Telaffuz: Se-uhaddisukum | Anlam: Size anlatacağım</span></span></td>
+            <td class="telaffuz">Se-uhaddisukum</td>
+            <td class="anlam">Size anlatacağım</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٩</td>
+            <td><span class="arabic-word c9">أَمَاكِن دِينِيَّة<span class="tooltip">Telaffuz: Emâkin dîniyye | Anlam: Dini mekânlar</span></span></td>
+            <td class="telaffuz">Emâkin dîniyye</td>
+            <td class="anlam">Dinî mekânlar</td>
+          </tr>
+          <tr>
+            <td class="num-cell">١٠</td>
+            <td><span class="arabic-word c10">اليَوْم<span class="tooltip">Telaffuz: El-yevm | Anlam: Bugün</span></span></td>
+            <td class="telaffuz">El-yevm</td>
+            <td class="anlam">Bugün</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== SECTION 2: HOW TO BUILD SENTENCES ====== -->
+  <div class="section-card">
+    <div class="section-header">
+      <span class="icon">🔨</span>
+      <h3>كيف نبني الجمل؟</h3>
+      <span class="tr-label">Cümleler Nasıl Kurulur?</span>
+    </div>
+    <div class="section-body">
+      <div class="instruction">📌 Bu bölümde Arapça cümle yapısını öğreniyoruz. Her cümlenin Arapçasını, okunuşunu ve Türkçe anlamını tabloda bulabilirsin.</div>
+      <table class="sentence-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>الجملة بالعربية</th>
+            <th>Telaffuz (Okunuş)</th>
+            <th>Türkçe Anlamı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">١</td>
+            <td class="arabic-sentence">
+              <span class="w c1">أَهْلاً<span class="tooltip">Ehlen | Hoş geldiniz</span></span>
+              <span class="w c3">وَسَهْلاً<span class="tooltip">ve sehlen | hoş bulunuz</span></span>
+              <span class="w c2">أَصْدِقَائِي<span class="tooltip">Esdikaaî | Arkadaşlarım</span></span>
+            </td>
+            <td class="sentence-telaffuz">Ehlen ve sehlen esdikaaî</td>
+            <td class="sentence-anlam">Hoş geldiniz arkadaşlarım!</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٢</td>
+            <td class="arabic-sentence">
+              <span class="w c5">أَنَا<span class="tooltip">Ene | Ben</span></span>
+              <span class="w c4">اِسْمِي<span class="tooltip">İsmî | Adım</span></span>
+              <span class="w c7">مُحَمَّد<span class="tooltip">Muhammed | Muhammed (isim örneği)</span></span>
+            </td>
+            <td class="sentence-telaffuz">Ene ismî Muhammed</td>
+            <td class="sentence-anlam">Ben, adım Muhammed.</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٣</td>
+            <td class="arabic-sentence">
+              <span class="w c5">أَنَا<span class="tooltip">Ene | Ben</span></span>
+              <span class="w c6">فِي<span class="tooltip">Fî | içinde / de</span></span>
+              <span class="w c8">الصَّفِّ<span class="tooltip">Es-saff | sınıf</span></span>
+              <span class="w c9">السَّادِس<span class="tooltip">Es-sâdis | altıncı</span></span>
+            </td>
+            <td class="sentence-telaffuz">Ene fis-saff is-sâdis</td>
+            <td class="sentence-anlam">Ben altıncı sınıftayım.</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٤</td>
+            <td class="arabic-sentence">
+              <span class="w c1">سَأُحَدِّثُكُمْ<span class="tooltip">Se-uhaddisukum | Size anlatacağım</span></span>
+              <span class="w c10">اليَوْمَ<span class="tooltip">El-yevme | bugün</span></span>
+              <span class="w c3">عَنْ<span class="tooltip">An | hakkında</span></span>
+              <span class="w c4">أَمَاكِنَ<span class="tooltip">Emâkine | mekânlar</span></span>
+              <span class="w c7">دِينِيَّة<span class="tooltip">Dîniyye | dinî</span></span>
+            </td>
+            <td class="sentence-telaffuz">Se-uhaddisukum el-yevme an emâkine dîniyye</td>
+            <td class="sentence-anlam">Bugün size dinî mekânlar hakkında anlatacağım.</td>
+          </tr>
+          <tr>
+            <td class="num-cell">٥</td>
+            <td class="arabic-sentence">
+              <span class="w c2">مَرْحَبًا<span class="tooltip">Merhaben | Merhaba</span></span>
+              <span class="w c5">بِكُمْ<span class="tooltip">Bikum | size / hepinize</span></span>
+              <span class="w c6">جَمِيعًا<span class="tooltip">Cemîan | hepiniz / tümünüz</span></span>
+            </td>
+            <td class="sentence-telaffuz">Merhaben bikum cemîan</td>
+            <td class="sentence-anlam">Hepinize merhaba!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== SECTION 3: PARAGRAPH CHOICE ====== -->
+  <div class="section-card">
+    <div class="section-header">
+      <span class="icon">🕌</span>
+      <h3>اختر فقرتك — الأماكن الدينية</h3>
+      <span class="tr-label">Paragrafını Seç — Dinî Mekânlar</span>
+    </div>
+    <div class="section-body">
+      <div class="instruction">📌 Aşağıdaki dört paragraftan birini seç. Renkli kelimelerin üzerine fareyi getirerek telaffuzunu ve Türkçe anlamını görebilirsin. Ezberlemek istediğin paragrafı seçebilirsin!</div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showPara(1)">📍 الفقرة الأولى — Mekke</button>
+        <button class="tab-btn" onclick="showPara(2)">⛰️ الفقرة الثانية — Mekke Yerleri</button>
+        <button class="tab-btn" onclick="showPara(3)">🌙 الفقرة الثالثة — Medine</button>
+        <button class="tab-btn" onclick="showPara(4)">🕍 الفقرة الرابعة — Kudüs</button>
+      </div>
+
+      <!-- PARAGRAPH 1 -->
+      <div class="para-display active" id="para1">
+        <div class="memorize-badge">⭐ يمكنك حفظ هذه الفقرة | Bu paragrafı ezberleyebilirsin</div>
+        <div class="para-arabic">
+          <span class="w c1">مَكَّةُ<span class="tooltip">Mekketu | Mekke şehri</span></span>
+          <span class="w c2">المُكَرَّمَةُ<span class="tooltip">El-mukerreme | Mükerrem (değerli)</span></span>
+          فِي
+          <span class="w c3">السُّعُودِيَّةِ<span class="tooltip">Es-suûdiyye | Suudi Arabistan</span></span>،
+          وَهِيَ
+          <span class="w c4">مَدِينَةٌ<span class="tooltip">Medînetun | Şehir</span></span>
+          <span class="w c5">مُقَدَّسَةٌ<span class="tooltip">Mukaddesetun | Kutsal</span></span>.
+          <span class="w c6">المَسْجِدُ<span class="tooltip">El-mescidu | Cami</span></span>
+          <span class="w c7">الحَرَامُ<span class="tooltip">El-harâm | Haram (kutsal yasak)</span></span>
+          <span class="w c8">يَقَعُ<span class="tooltip">Yeka'u | bulunmaktadır / yer almaktadır</span></span>
+          فِي
+          <span class="w c1">مَكَّةَ<span class="tooltip">Mekke | Mekke şehri</span></span>
+          <span class="w c2">المُكَرَّمَةِ<span class="tooltip">El-mukerreme | Mükerrem (değerli)</span></span>،
+          وَهُوَ
+          <span class="w c5">مُقَدَّسٌ<span class="tooltip">Mukaddedun | Kutsal</span></span>
+          <span class="w c9">أَيْضًا<span class="tooltip">Eydan | Ayrıca / de</span></span>.
+          وَفِي
+          <span class="w c10">دَاخِلِ<span class="tooltip">Dâhili | İçinde</span></span>
+          <span class="w c6">المَسْجِدِ<span class="tooltip">El-mescid | Cami</span></span>
+          <span class="w c7">الحَرَامِ<span class="tooltip">El-harâm | Haram</span></span>
+          تَقَعُ
+          <span class="w c1">الكَعْبَةُ<span class="tooltip">El-Ka'betu | Kabe</span></span>
+          <span class="w c3">الشَّرِيفَةُ<span class="tooltip">Eş-şerîfe | Şerife (yüce, şerefli)</span></span>،
+          وَ
+          <span class="w c1">الكَعْبَةُ<span class="tooltip">El-Ka'betu | Kabe</span></span>
+          <span class="w c3">الشَّرِيفَةُ<span class="tooltip">Eş-şerîfe | Şerife</span></span>
+          هِيَ
+          <span class="w c4">قِبْلَةُ<span class="tooltip">Kıbletu | Kıble</span></span>
+          <span class="w c2">المُسْلِمِينَ<span class="tooltip">El-müslimîn | Müslümanların</span></span>.
+        </div>
+        <hr class="divider">
+        <table class="para-vocab-table">
+          <thead>
+            <tr><th>#</th><th>الكلمة</th><th>Telaffuz</th><th>Türkçe Anlamı</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num-cell">١</td><td class="pv-arabic c1">مَكَّةُ المُكَرَّمَةُ</td><td class="pv-tel">Mekketu'l-mukerreme</td><td class="pv-anlam">Mekke-i Mükerreme</td></tr>
+            <tr><td class="num-cell">٢</td><td class="pv-arabic c3">السُّعُودِيَّةُ</td><td class="pv-tel">Es-Su'ûdiyye</td><td class="pv-anlam">Suudi Arabistan</td></tr>
+            <tr><td class="num-cell">٣</td><td class="pv-arabic c5">مُقَدَّسَةٌ</td><td class="pv-tel">Mukaddese(tun)</td><td class="pv-anlam">Kutsal</td></tr>
+            <tr><td class="num-cell">٤</td><td class="pv-arabic c6">المَسْجِدُ الحَرَامُ</td><td class="pv-tel">El-Mescidu'l-Harâm</td><td class="pv-anlam">Mescid-i Haram</td></tr>
+            <tr><td class="num-cell">٥</td><td class="pv-arabic c8">يَقَعُ</td><td class="pv-tel">Yeka'u</td><td class="pv-anlam">Yer alır / Bulunur</td></tr>
+            <tr><td class="num-cell">٦</td><td class="pv-arabic c10">دَاخِلَ</td><td class="pv-tel">Dâhile</td><td class="pv-anlam">İçinde</td></tr>
+            <tr><td class="num-cell">٧</td><td class="pv-arabic c1">الكَعْبَةُ الشَّرِيفَةُ</td><td class="pv-tel">El-Ka'betu'ş-şerîfe</td><td class="pv-anlam">Kabe-i Şerife</td></tr>
+            <tr><td class="num-cell">٨</td><td class="pv-arabic c4">قِبْلَةُ المُسْلِمِينَ</td><td class="pv-tel">Kıbletu'l-müslimîn</td><td class="pv-anlam">Müslümanların kıblesi</td></tr>
+            <tr><td class="num-cell">٩</td><td class="pv-arabic c9">أَيْضًا</td><td class="pv-tel">Eydan</td><td class="pv-anlam">Ayrıca / de</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PARAGRAPH 2 -->
+      <div class="para-display" id="para2">
+        <div class="memorize-badge">⭐ يمكنك حفظ هذه الفقرة | Bu paragrafı ezberleyebilirsin</div>
+        <div class="para-arabic">
+          فِي
+          <span class="w c1">مَدِينَةِ<span class="tooltip">Medîneti | Şehrinde</span></span>
+          <span class="w c2">مَكَّةَ<span class="tooltip">Mekke | Mekke</span></span>
+          <span class="w c3">المُكَرَّمَةِ<span class="tooltip">El-mukerreme | Mükerrem</span></span>
+          <span class="w c4">أَمَاكِنُ<span class="tooltip">Emâkinu | Mekânlar / yerler</span></span>
+          <span class="w c5">مُهِمَّةٌ<span class="tooltip">Muhimme | Önemli</span></span>
+          <span class="w c6">كَثِيرَةٌ<span class="tooltip">Kesîre | Çok / birçok</span></span>.
+          <span class="w c7">جَبَلُ<span class="tooltip">Cebelü | Dağ</span></span>
+          <span class="w c8">النُّورِ<span class="tooltip">En-nûr | Işık / Nur</span></span>
+          <span class="w c7">جَبَلٌ<span class="tooltip">Cebel | Dağ</span></span>
+          <span class="w c5">مُهِمٌّ<span class="tooltip">Muhimm | Önemli</span></span>
+          فِي
+          <span class="w c2">مَكَّةَ<span class="tooltip">Mekke | Mekke</span></span>
+          <span class="w c3">المُكَرَّمَةِ<span class="tooltip">El-mukerreme | Mükerrem</span></span>.
+          وَ
+          <span class="w c9">غَارُ<span class="tooltip">Ğâru | Mağara</span></span>
+          <span class="w c10">حِرَاءٍ<span class="tooltip">Hirâ | Hira (dağ adı)</span></span>
+          هُوَ
+          <span class="w c9">غَارٌ<span class="tooltip">Ğâr | Mağara</span></span>
+          <span class="w c5">مُهِمٌّ<span class="tooltip">Muhimm | Önemli</span></span>
+          فِي
+          <span class="w c2">مَكَّةَ<span class="tooltip">Mekke | Mekke</span></span>
+          <span class="w c3">المُكَرَّمَةِ<span class="tooltip">El-mukerreme | Mükerrem</span></span>
+          <span class="w c4">أَيْضًا<span class="tooltip">Eydan | Ayrıca / de</span></span>.
+          وَ
+          <span class="w c1">الكَعْبَةُ<span class="tooltip">El-Ka'be | Kabe</span></span>
+          <span class="w c3">الشَّرِيفَةُ<span class="tooltip">Eş-şerîfe | Şerife</span></span>
+          <span class="w c6">قِبْلَةُ<span class="tooltip">Kıble | Kıble</span></span>
+          <span class="w c8">المُسْلِمِينَ<span class="tooltip">El-müslimîn | Müslümanların</span></span>
+          هِيَ فِي
+          <span class="w c7">المَسْجِدِ<span class="tooltip">El-mescid | Cami</span></span>
+          <span class="w c2">الحَرَامِ<span class="tooltip">El-harâm | Haram</span></span>.
+        </div>
+        <hr class="divider">
+        <table class="para-vocab-table">
+          <thead>
+            <tr><th>#</th><th>الكلمة</th><th>Telaffuz</th><th>Türkçe Anlamı</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num-cell">١</td><td class="pv-arabic c4">أَمَاكِنُ</td><td class="pv-tel">Emâkinu</td><td class="pv-anlam">Mekânlar / Yerler</td></tr>
+            <tr><td class="num-cell">٢</td><td class="pv-arabic c5">مُهِمَّةٌ كَثِيرَةٌ</td><td class="pv-tel">Muhimmetun kesîre</td><td class="pv-anlam">Pek çok önemli</td></tr>
+            <tr><td class="num-cell">٣</td><td class="pv-arabic c7">جَبَلُ النُّورِ</td><td class="pv-tel">Cebelu'n-nûr</td><td class="pv-anlam">Nur Dağı</td></tr>
+            <tr><td class="num-cell">٤</td><td class="pv-arabic c9">غَارُ حِرَاءٍ</td><td class="pv-tel">Ğâru hirâ</td><td class="pv-anlam">Hira Mağarası</td></tr>
+            <tr><td class="num-cell">٥</td><td class="pv-arabic c5">مُهِمٌّ</td><td class="pv-tel">Muhimm(un)</td><td class="pv-anlam">Önemli</td></tr>
+            <tr><td class="num-cell">٦</td><td class="pv-arabic c1">الكَعْبَةُ الشَّرِيفَةُ</td><td class="pv-tel">El-Ka'betu'ş-şerîfe</td><td class="pv-anlam">Kabe-i Şerife</td></tr>
+            <tr><td class="num-cell">٧</td><td class="pv-arabic c6">قِبْلَةُ المُسْلِمِينَ</td><td class="pv-tel">Kıbletu'l-müslimîn</td><td class="pv-anlam">Müslümanların kıblesi</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PARAGRAPH 3 -->
+      <div class="para-display" id="para3">
+        <div class="memorize-badge">⭐ يمكنك حفظ هذه الفقرة | Bu paragrafı ezberleyebilirsin</div>
+        <div class="para-arabic">
+          <span class="w c1">المَدِينَةُ<span class="tooltip">El-Medîne | Medine şehri</span></span>
+          <span class="w c2">المُنَوَّرَةُ<span class="tooltip">El-munevvere | Nurlanmış / Işıklı</span></span>
+          هِيَ
+          <span class="w c3">مَدِينَةٌ<span class="tooltip">Medînetun | Şehir</span></span>
+          <span class="w c4">مُقَدَّسَةٌ<span class="tooltip">Mukaddese | Kutsal</span></span>
+          <span class="w c5">أَيْضًا<span class="tooltip">Eydan | Ayrıca</span></span>.
+          <span class="w c1">المَدِينَةُ<span class="tooltip">El-Medîne | Medine</span></span>
+          <span class="w c2">المُنَوَّرَةُ<span class="tooltip">El-munevvere | Nurlanmış</span></span>
+          <span class="w c6">أَوَّلُ<span class="tooltip">Evvelu | İlk</span></span>
+          <span class="w c7">عَاصِمَةٍ<span class="tooltip">Âsimeti | Başkent</span></span>
+          <span class="w c8">لِلْمُسْلِمِينَ<span class="tooltip">Lil-müslimîn | Müslümanlar için</span></span>.
+          <span class="w c9">نَحْنُ<span class="tooltip">Nahnu | Biz</span></span>
+          <span class="w c10">نَعْرِفُ<span class="tooltip">Na'rifu | Biliyoruz / tanıyoruz</span></span>
+          <span class="w c3">جَبَلَ<span class="tooltip">Cebele | Dağını</span></span>
+          <span class="w c4">أُحُدٍ<span class="tooltip">Uhud | Uhud (dağ adı)</span></span>
+          فِي
+          <span class="w c1">المَدِينَةِ<span class="tooltip">El-Medîne | Medine</span></span>
+          <span class="w c2">المُنَوَّرَةِ<span class="tooltip">El-munevvere | Nurlanmış</span></span>،
+          وَ
+          <span class="w c10">نَعْرِفُ<span class="tooltip">Na'rifu | Biliyoruz</span></span>
+          أَنَّ
+          <span class="w c6">أَوَّلَ<span class="tooltip">Evvele | İlk</span></span>
+          <span class="w c7">مَسْجِدٍ<span class="tooltip">Mescid | Cami</span></span>
+          فِي
+          <span class="w c8">الإِسْلَامِ<span class="tooltip">El-İslâm | İslam</span></span>
+          هُوَ
+          <span class="w c5">مَسْجِدُ<span class="tooltip">Mescidu | Camisi</span></span>
+          <span class="w c9">قُبَاءٍ<span class="tooltip">Kubâ | Kuba (yer adı)</span></span>.
+        </div>
+        <hr class="divider">
+        <table class="para-vocab-table">
+          <thead>
+            <tr><th>#</th><th>الكلمة</th><th>Telaffuz</th><th>Türkçe Anlamı</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num-cell">١</td><td class="pv-arabic c1">المَدِينَةُ المُنَوَّرَةُ</td><td class="pv-tel">El-Medînetu'l-munevvere</td><td class="pv-anlam">Medine-i Münevvere</td></tr>
+            <tr><td class="num-cell">٢</td><td class="pv-arabic c4">مُقَدَّسَةٌ</td><td class="pv-tel">Mukaddese(tun)</td><td class="pv-anlam">Kutsal</td></tr>
+            <tr><td class="num-cell">٣</td><td class="pv-arabic c6">أَوَّلُ عَاصِمَةٍ</td><td class="pv-tel">Evvelu âsimeti</td><td class="pv-anlam">İlk başkent</td></tr>
+            <tr><td class="num-cell">٤</td><td class="pv-arabic c9">نَحْنُ نَعْرِفُ</td><td class="pv-tel">Nahnu na'rifu</td><td class="pv-anlam">Biz biliyoruz</td></tr>
+            <tr><td class="num-cell">٥</td><td class="pv-arabic c3">جَبَلُ أُحُد</td><td class="pv-tel">Cebelu Uhud</td><td class="pv-anlam">Uhud Dağı</td></tr>
+            <tr><td class="num-cell">٦</td><td class="pv-arabic c7">أَوَّلُ مَسْجِدٍ</td><td class="pv-tel">Evvelu mescid</td><td class="pv-anlam">İlk cami</td></tr>
+            <tr><td class="num-cell">٧</td><td class="pv-arabic c5">مَسْجِدُ قُبَاء</td><td class="pv-tel">Mescidu Kubâ</td><td class="pv-anlam">Kuba Camii</td></tr>
+            <tr><td class="num-cell">٨</td><td class="pv-arabic c8">الإِسْلَام</td><td class="pv-tel">El-İslâm</td><td class="pv-anlam">İslam</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PARAGRAPH 4 -->
+      <div class="para-display" id="para4">
+        <div class="memorize-badge">⭐ يمكنك حفظ هذه الفقرة | Bu paragrafı ezberleyebilirsin</div>
+        <div class="para-arabic">
+          <span class="w c1">القُدْسُ<span class="tooltip">El-Kudüs | Kudüs şehri</span></span>
+          <span class="w c2">مَدِينَةٌ<span class="tooltip">Medînetun | Şehir</span></span>
+          <span class="w c3">مُقَدَّسَةٌ<span class="tooltip">Mukaddese | Kutsal</span></span>،
+          وَ
+          <span class="w c4">قَالَ<span class="tooltip">Kâle | Dedi / buyurdu</span></span>
+          <span class="w c5">عَنْهَا<span class="tooltip">Anhâ | Hakkında</span></span>
+          <span class="w c6">النَّبِيُّ<span class="tooltip">En-Nebiyyu | Peygamber</span></span> ﷺ
+          فِي
+          <span class="w c7">الحَدِيثِ<span class="tooltip">El-hadîs | Hadis</span></span>
+          <span class="w c8">الشَّرِيفِ<span class="tooltip">Eş-şerîf | Şerif (yüce)</span></span>:
+        </div>
+        <div class="hadith-box">
+          «لَا تُشَدُّ الرِّحَالُ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ: الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِ الرَّسُولِ ﷺ وَالْمَسْجِدِ الأَقْصَى.»
+          <br>
+          <span style="font-family:'Nunito',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); font-style:italic;">
+            "Lâ tuşeddu'r-rihâlu illâ ilâ selâseti mesâcide: El-Mescidi'l-Harâm ve Mescidi'r-Rasûl ﷺ ve'l-Mescidi'l-Aksâ."
+          </span>
+        </div>
+        <div class="para-arabic" style="margin-top:10px;">
+          <span class="w c9">هَذَا<span class="tooltip">Hâzâ | Bu</span></span>
+          <span class="w c7">الحَدِيثُ<span class="tooltip">El-hadîs | Hadis</span></span>
+          فِي
+          <span class="w c10">صَحِيحِ<span class="tooltip">Sahîhi | Sahihinde (güvenilir hadis kitabı)</span></span>
+          <span class="w c4">البُخَارِيِّ<span class="tooltip">El-Buhârî | Buhari (hadis âlimi)</span></span>.
+        </div>
+        <hr class="divider">
+        <table class="para-vocab-table">
+          <thead>
+            <tr><th>#</th><th>الكلمة</th><th>Telaffuz</th><th>Türkçe Anlamı</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num-cell">١</td><td class="pv-arabic c1">القُدْسُ</td><td class="pv-tel">El-Kudüs</td><td class="pv-anlam">Kudüs şehri</td></tr>
+            <tr><td class="num-cell">٢</td><td class="pv-arabic c3">مُقَدَّسَةٌ</td><td class="pv-tel">Mukaddese</td><td class="pv-anlam">Kutsal</td></tr>
+            <tr><td class="num-cell">٣</td><td class="pv-arabic c6">النَّبِيُّ</td><td class="pv-tel">En-Nebiyyu</td><td class="pv-anlam">Peygamber</td></tr>
+            <tr><td class="num-cell">٤</td><td class="pv-arabic c7">الحَدِيثُ الشَّرِيفُ</td><td class="pv-tel">El-Hadîsu'ş-şerîf</td><td class="pv-anlam">Şerif hadis (peygamber sözü)</td></tr>
+            <tr><td class="num-cell">٥</td><td class="pv-arabic c5">لَا تُشَدُّ الرِّحَالُ</td><td class="pv-tel">Lâ tuşeddu'r-rihâl</td><td class="pv-anlam">Seyahat edilmez / yola çıkılmaz</td></tr>
+            <tr><td class="num-cell">٦</td><td class="pv-arabic c2">ثَلَاثَةِ مَسَاجِدَ</td><td class="pv-tel">Selâseti mesâcide</td><td class="pv-anlam">Üç cami(ye)</td></tr>
+            <tr><td class="num-cell">٧</td><td class="pv-arabic c8">المَسْجِدُ الأَقْصَى</td><td class="pv-tel">El-Mescidu'l-Aksâ</td><td class="pv-anlam">Mescid-i Aksa</td></tr>
+            <tr><td class="num-cell">٨</td><td class="pv-arabic c10">صَحِيحُ البُخَارِيّ</td><td class="pv-tel">Sahîhu'l-Buhârî</td><td class="pv-anlam">Sahih-i Buhari (hadis kitabı)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== SECTION 4: FULL SPEECH MODEL ====== -->
+  <div class="section-card">
+    <div class="section-header">
+      <span class="icon">🗣️</span>
+      <h3>نموذج الخطاب الكامل — مثال</h3>
+      <span class="tr-label">Tam Konuşma Örneği</span>
+    </div>
+    <div class="section-body">
+      <div class="instruction">📌 Aşağıda tam bir konuşma örneği verilmiştir. Her bölüm farklı renktedir. Kendi ismini ve seçtiğin paragrafı ekleyerek konuşmayı tamamla!</div>
+      <div class="para-arabic" style="line-height: 2.8; font-size: 20px;">
+        <span style="color:#1A3A2A; font-size:13px; font-family:'Nunito',sans-serif; display:block; margin-bottom:4px;">① Selamlama — Karşılama</span>
+        <span class="w c1">أَهْلاً وَسَهْلاً<span class="tooltip">Ehlen ve sehlen | Hoş geldiniz</span></span>
+        <span class="w c2">أَصْدِقَائِي<span class="tooltip">Esdikaaî | Arkadaşlarım</span></span>!
+        <br>
+        <span style="color:#1A3A2A; font-size:13px; font-family:'Nunito',sans-serif; display:block; margin: 8px 0 4px;">② Tanıtım</span>
+        <span class="w c5">أَنَا<span class="tooltip">Ene | Ben</span></span>
+        <span class="w c4">اِسْمِي<span class="tooltip">İsmî | Adım</span></span>
+        <span style="background:rgba(201,152,58,0.2); padding: 2px 10px; border-radius:6px; color:#7A5C1E; font-family:'Nunito',sans-serif; font-size:14px;">[ اسمك | Adın ]</span>،
+        <span class="w c5">أَنَا<span class="tooltip">Ene | Ben</span></span>
+        <span class="w c6">فِي<span class="tooltip">Fî | ...-de/-da</span></span>
+        <span class="w c8">الصَّفِّ<span class="tooltip">Es-saff | Sınıf</span></span>
+        <span class="w c9">السَّادِس<span class="tooltip">Es-sâdis | Altıncı</span></span>.
+        <br>
+        <span style="color:#1A3A2A; font-size:13px; font-family:'Nunito',sans-serif; display:block; margin: 8px 0 4px;">③ Konuyu açıklama</span>
+        <span class="w c1">سَأُحَدِّثُكُمْ<span class="tooltip">Se-uhaddisukum | Size anlatacağım</span></span>
+        <span class="w c10">اليَوْمَ<span class="tooltip">El-yevme | Bugün</span></span>
+        <span class="w c3">عَنْ<span class="tooltip">An | hakkında</span></span>
+        <span class="w c4">أَمَاكِنَ<span class="tooltip">Emâkine | Mekânlar</span></span>
+        <span class="w c7">دِينِيَّةٍ<span class="tooltip">Dîniyye | Dinî</span></span>.
+        <br>
+        <span style="color:#1A3A2A; font-size:13px; font-family:'Nunito',sans-serif; display:block; margin: 8px 0 4px;">④ Seçtiğin paragraf — الفقرة التي اخترتها</span>
+        <span style="background:rgba(74,140,92,0.1); padding: 6px 14px; border-radius:8px; color:#1A3A2A; font-family:'Nunito',sans-serif; font-size:13px; display:inline-block;">[ اختر واحدة من الفقرات الأربع أعلاه | Yukarıdaki 4 paragraftan birini seç ]</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  كتيب المحادثة · الصف السادس · الأماكن الدينية | 6. Sınıf Arapça Konuşma Kitapçığı
+</div>
+
+<script>
+  function showPara(n) {
+    // Hide all
+    document.querySelectorAll('.para-display').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    // Show selected
+    document.getElementById('para' + n).classList.add('active');
+    document.querySelectorAll('.tab-btn')[n - 1].classList.add('active');
+  }
+</script>
+</body>
+</html>
